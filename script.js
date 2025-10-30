@@ -23,14 +23,15 @@ function getHumanChoice() {
     return userInput;
 };
 
-/* Round One */
+
+/* One round of play */
 function playRound(humanChoice, computerChoice) {
     /* making choice case insesitive */
     humanChoice = humanChoice.toLowerCase();
     /* if else code based outcome of choices */
     if (computerChoice == 'rock' && humanChoice == 'scissors') {
         computerScore += 1;
-        console.log('Sorry, you lose! Rock beats scissors.');
+        console.log(`Sorry, you lose! Rock beats scissors. Human:${humanScore} Computer:${computerScore}`);
     } else if (computerChoice == 'paper' && humanChoice == 'rock'){
         computerScore += 1;
         console.log('Sorry, you lose! Paper covers Rock.');
@@ -51,7 +52,14 @@ function playRound(humanChoice, computerChoice) {
     };
 };
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+/* Looping through round to play 5 rounds */
+function playGame() {
+    for (let i = 0; i < 5; i++){
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+    };
+};
 
-playRound(humanSelection, computerSelection);
+playGame();
+
