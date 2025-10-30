@@ -34,21 +34,21 @@ function playRound(humanChoice, computerChoice) {
         console.log(`Sorry, you lose! Rock beats scissors. Human:${humanScore} Computer:${computerScore}`);
     } else if (computerChoice == 'paper' && humanChoice == 'rock'){
         computerScore += 1;
-        console.log('Sorry, you lose! Paper covers Rock.');
+        console.log(`Sorry, you lose! Paper covers Rock. Human:${humanScore} Computer:${computerScore}`);
     } else if (computerChoice == 'scissors' && humanChoice == 'paper'){
         computerScore += 1;
-        console.log('Sorry, you lose! Scissors cuts paper');
+        console.log(`Sorry, you lose! Scissors cuts paper. Human:${humanScore} Computer:${computerScore}`);
     } else if (humanChoice == 'rock' && computerChoice == 'scissors'){
         humanScore += 1;
-        console.log('You win! Rock beats Scissors!');
+        console.log(`You win! Rock beats Scissors! Human:${humanScore} Computer:${computerScore}`);
     } else if (humanChoice == 'paper' && computerChoice == 'rock'){
         humanScore += 1;
-        console.log('You win! Paper covers Rock!');
+        console.log(`You win! Paper covers Rock! Human:${humanScore} Computer:${computerScore}`);
     } else if (humanChoice == 'scissors' && computerChoice == 'paper'){
         humanScore += 1;
-        console.log('You win! Scissors cuts Paper!');
+        console.log(`You win! Scissors cuts Paper! Human:${humanScore} Computer:${computerScore}`);
     } else {
-        console.log("It's a tie! Try again.")
+        console.log(`It's a tie! Try again. Human:${humanScore} Computer:${computerScore}`)
     };
 };
 
